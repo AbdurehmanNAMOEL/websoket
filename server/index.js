@@ -19,7 +19,6 @@ io.on('connection', socket=>{
     })
 
     socket.on("userMessage",data=>{
-        console.log(data);
      socket.to(data.room).emit('receiver',data)
     })
 
